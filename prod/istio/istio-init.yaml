@@ -16,6 +16,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: networking.istio.io
       names:
@@ -56,6 +58,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: networking.istio.io
       names:
@@ -92,6 +96,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: networking.istio.io
       names:
@@ -136,6 +142,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: networking.istio.io
       names:
@@ -159,6 +167,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: networking.istio.io
       names:
@@ -180,6 +190,8 @@ data:
         istio: rbac
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: rbac.istio.io
       names:
@@ -201,6 +213,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: authentication.istio.io
       names:
@@ -222,6 +236,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: authentication.istio.io
       names:
@@ -244,6 +260,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -265,6 +283,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -286,6 +306,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -307,6 +329,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -330,6 +354,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -353,6 +379,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -376,6 +404,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -399,6 +429,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -422,6 +454,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -445,6 +479,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -468,6 +504,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -491,6 +529,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -514,6 +554,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -537,6 +579,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -560,6 +604,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -583,6 +629,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -606,6 +654,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -629,6 +679,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -649,6 +701,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -672,6 +726,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -695,6 +751,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -718,6 +776,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -741,6 +801,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -764,6 +826,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -787,6 +851,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -810,6 +876,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -833,6 +901,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -856,6 +926,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -879,6 +951,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -922,6 +996,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -945,6 +1021,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -968,6 +1046,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -991,6 +1071,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -1014,6 +1096,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -1037,6 +1121,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: rbac.istio.io
       names:
@@ -1060,6 +1146,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: rbac.istio.io
       names:
@@ -1083,6 +1171,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: rbac.istio.io
       names:
@@ -1118,6 +1208,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -1141,6 +1233,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -1164,6 +1258,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -1187,6 +1283,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -1218,6 +1316,8 @@ data:
         app: mixer
         package: cloudwatch
         istio: mixer-adapter
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -1238,6 +1338,8 @@ data:
         app: mixer
         package: dogstatsd
         istio: mixer-adapter
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -1259,6 +1361,8 @@ data:
         chart: istio
         heritage: Tiller
         release: istio
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: networking.istio.io
       names:
@@ -1275,12 +1379,12 @@ data:
     apiVersion: apiextensions.k8s.io/v1beta1
     metadata:
       name: zipkins.config.istio.io
-      annotations:
-        "helm.sh/hook": crd-install
       labels:
         app: mixer
         package: zipkin
         istio: mixer-adapter
+      annotations:
+        "helm.sh/resource-policy": keep
     spec:
       group: config.istio.io
       names:
@@ -1293,182 +1397,6 @@ data:
       scope: Namespaced
       version: v1alpha2
     ---
-    
-
----
-# Source: istio-init/templates/configmap-crd-certmanager-10.yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  namespace: default
-  name: istio-crd-certmanager-10
-data:
-  crd-certmanager-10.yaml: |-
-    apiVersion: apiextensions.k8s.io/v1beta1
-    kind: CustomResourceDefinition
-    metadata:
-      name: clusterissuers.certmanager.k8s.io
-      annotations:
-        "helm.sh/hook": crd-install
-      labels:
-        app: certmanager
-        chart: certmanager
-        heritage: Tiller
-        release: istio
-    spec:
-      group: certmanager.k8s.io
-      version: v1alpha1
-      names:
-        kind: ClusterIssuer
-        plural: clusterissuers
-      scope: Cluster
-    ---
-    apiVersion: apiextensions.k8s.io/v1beta1
-    kind: CustomResourceDefinition
-    metadata:
-      name: issuers.certmanager.k8s.io
-      annotations:
-        "helm.sh/hook": crd-install
-      labels:
-        app: certmanager
-        chart: certmanager
-        heritage: Tiller
-        release: istio
-    spec:
-      group: certmanager.k8s.io
-      version: v1alpha1
-      names:
-        kind: Issuer
-        plural: issuers
-      scope: Namespaced
-    ---
-    apiVersion: apiextensions.k8s.io/v1beta1
-    kind: CustomResourceDefinition
-    metadata:
-      name: certificates.certmanager.k8s.io
-      annotations:
-        "helm.sh/hook": crd-install
-      labels:
-        app: certmanager
-        chart: certmanager
-        heritage: Tiller
-        release: istio
-    spec:
-      additionalPrinterColumns:
-        - JSONPath: .status.conditions[?(@.type=="Ready")].status
-          name: Ready
-          type: string
-        - JSONPath: .spec.secretName
-          name: Secret
-          type: string
-        - JSONPath: .spec.issuerRef.name
-          name: Issuer
-          type: string
-          priority: 1
-        - JSONPath: .status.conditions[?(@.type=="Ready")].message
-          name: Status
-          type: string
-          priority: 1
-        - JSONPath: .metadata.creationTimestamp
-          description: |-
-            CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
-    
-            Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
-          name: Age
-          type: date
-      group: certmanager.k8s.io
-      version: v1alpha1
-      scope: Namespaced
-      names:
-        kind: Certificate
-        plural: certificates
-        shortNames:
-          - cert
-          - certs
-    
-
----
-# Source: istio-init/templates/configmap-crd-certmanager-11.yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  namespace: default
-  name: istio-crd-certmanager-11
-data:
-  crd-certmanager-11.yaml: |-
-    apiVersion: apiextensions.k8s.io/v1beta1
-    kind: CustomResourceDefinition
-    metadata:
-      name: orders.certmanager.k8s.io
-      annotations:
-        "helm.sh/hook": crd-install
-      labels:
-        app: certmanager
-        chart: certmanager
-        heritage: Tiller
-        release: istio
-    spec:
-      additionalPrinterColumns:
-        - JSONPath: .status.state
-          name: State
-          type: string
-        - JSONPath: .spec.issuerRef.name
-          name: Issuer
-          type: string
-          priority: 1
-        - JSONPath: .status.reason
-          name: Reason
-          type: string
-          priority: 1
-        - JSONPath: .metadata.creationTimestamp
-          description: |-
-            CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
-    
-            Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
-          name: Age
-          type: date
-      group: certmanager.k8s.io
-      version: v1alpha1
-      names:
-        kind: Order
-        plural: orders
-      scope: Namespaced
-    ---
-    apiVersion: apiextensions.k8s.io/v1beta1
-    kind: CustomResourceDefinition
-    metadata:
-      name: challenges.certmanager.k8s.io
-      annotations:
-        "helm.sh/hook": crd-install
-      labels:
-        app: certmanager
-        chart: certmanager
-        heritage: Tiller
-        release: istio
-    spec:
-      additionalPrinterColumns:
-        - JSONPath: .status.state
-          name: State
-          type: string
-        - JSONPath: .spec.dnsName
-          name: Domain
-          type: string
-        - JSONPath: .status.reason
-          name: Reason
-          type: string
-        - JSONPath: .metadata.creationTimestamp
-          description: |-
-            CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
-    
-            Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata
-          name: Age
-          type: date
-      group: certmanager.k8s.io
-      version: v1alpha1
-      names:
-        kind: Challenge
-        plural: challenges
-      scope: Namespaced
     
 
 ---
@@ -1534,7 +1462,7 @@ spec:
       serviceAccountName: istio-init-service-account
       containers:
       - name: istio-init-crd-10
-        image: "docker.io/istio/kubectl:1.1.0-rc.3"
+        image: "docker.io/istio/kubectl:1.1.0"
         imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: crd-10
@@ -1563,7 +1491,7 @@ spec:
       serviceAccountName: istio-init-service-account
       containers:
       - name: istio-init-crd-11
-        image: "docker.io/istio/kubectl:1.1.0-rc.3"
+        image: "docker.io/istio/kubectl:1.1.0"
         imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: crd-11
@@ -1577,60 +1505,18 @@ spec:
       restartPolicy: OnFailure
 
 ---
+# Source: istio-init/templates/configmap-crd-certmanager-10.yaml
+
+
+---
+# Source: istio-init/templates/configmap-crd-certmanager-11.yaml
+
+
+---
 # Source: istio-init/templates/job-crd-certmanager-10.yaml
-apiVersion: batch/v1
-kind: Job
-metadata:
-  namespace: default
-  name: istio-init-crd-certmanager-10
-spec:
-  template:
-    metadata:
-      annotations:
-        sidecar.istio.io/inject: "false"
-    spec:
-      serviceAccountName: istio-init-service-account
-      containers:
-      - name: istio-init-crd-certmanager-10
-        image: "docker.io/istio/kubectl:1.1.0-rc.3"
-        imagePullPolicy: IfNotPresent
-        volumeMounts:
-        - name: crd-certmanager-10
-          mountPath: /etc/istio/crd-certmanager-10
-          readOnly: true
-        command: ["kubectl",  "apply", "-f", "/etc/istio/crd-certmanager-10/crd-certmanager-10.yaml"]
-      volumes:
-      - name: crd-certmanager-10
-        configMap:
-          name: istio-crd-certmanager-10
-      restartPolicy: OnFailure
+
 
 ---
 # Source: istio-init/templates/job-crd-certmanager-11.yaml
-apiVersion: batch/v1
-kind: Job
-metadata:
-  namespace: default
-  name: istio-init-crd-certmanager-11
-spec:
-  template:
-    metadata:
-      annotations:
-        sidecar.istio.io/inject: "false"
-    spec:
-      serviceAccountName: istio-init-service-account
-      containers:
-      - name: istio-init-crd-certmanager-11
-        image: "docker.io/istio/kubectl:1.1.0-rc.3"
-        imagePullPolicy: IfNotPresent
-        volumeMounts:
-        - name: crd-certmanager-11
-          mountPath: /etc/istio/crd-certmanager-11
-          readOnly: true
-        command: ["kubectl",  "apply", "-f", "/etc/istio/crd-certmanager-11/crd-certmanager-11.yaml"]
-      volumes:
-      - name: crd-certmanager-11
-        configMap:
-          name: istio-crd-certmanager-11
-      restartPolicy: OnFailure
+
 
