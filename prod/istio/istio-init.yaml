@@ -3,7 +3,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: default
+  namespace: istio-system
   name: istio-crd-10
 data:
   crd-10.yaml: |-
@@ -1304,7 +1304,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  namespace: default
+  namespace: istio-system
   name: istio-crd-11
 data:
   crd-11.yaml: |-
@@ -1405,7 +1405,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: istio-init-service-account
-  namespace: default
+  namespace: istio-system
   labels:
     app: istio-init
     istio: init
@@ -1416,7 +1416,7 @@ metadata:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: istio-init-default
+  name: istio-init-istio-system
   labels:
     app: istio-init
     istio: istio-init
@@ -1433,25 +1433,25 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: istio-init-admin-role-binding-default
+  name: istio-init-admin-role-binding-istio-system
   labels:
     app: istio-init
     istio: init
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: istio-init-default
+  name: istio-init-istio-system
 subjects:
   - kind: ServiceAccount
     name: istio-init-service-account
-    namespace: default
+    namespace: istio-system
 
 ---
 # Source: istio-init/templates/job-crd-10.yaml
 apiVersion: batch/v1
 kind: Job
 metadata:
-  namespace: default
+  namespace: istio-system
   name: istio-init-crd-10
 spec:
   template:
@@ -1462,7 +1462,7 @@ spec:
       serviceAccountName: istio-init-service-account
       containers:
       - name: istio-init-crd-10
-        image: "docker.io/istio/kubectl:1.1.0"
+        image: "docker.io/istio/kubectl:1.1.1"
         imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: crd-10
@@ -1480,7 +1480,7 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  namespace: default
+  namespace: istio-system
   name: istio-init-crd-11
 spec:
   template:
@@ -1491,7 +1491,7 @@ spec:
       serviceAccountName: istio-init-service-account
       containers:
       - name: istio-init-crd-11
-        image: "docker.io/istio/kubectl:1.1.0"
+        image: "docker.io/istio/kubectl:1.1.1"
         imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: crd-11
