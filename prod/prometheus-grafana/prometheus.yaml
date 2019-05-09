@@ -1007,8 +1007,8 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 4Gi
-  storageClassName: managed-premium
+      storage: 2Gi
+  storageClassName: default
 
 ---
 apiVersion: v1
@@ -1027,8 +1027,7 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 64Gi
-  storageClassName: managed-premium
+      storage: 8Gi
 
 ---
 apiVersion: v1
