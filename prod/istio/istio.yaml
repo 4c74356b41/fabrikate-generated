@@ -12292,7 +12292,7 @@ data:
       initContainers:
       [[ if ne (annotation .ObjectMeta `sidecar.istio.io/interceptionMode` .ProxyConfig.InterceptionMode) "NONE" ]]
       - name: istio-init
-        image: "docker.io/istio/proxy_init:1.1.5"
+        image: "docker.io/istio/proxy_init:1.1.6"
         args:
         - "-p"
         - [[ .MeshConfig.ProxyListenPort ]]
@@ -12330,7 +12330,7 @@ data:
       [[ end -]]
       containers:
       - name: istio-proxy
-        image: [[ annotation .ObjectMeta `sidecar.istio.io/proxyImage`  "docker.io/istio/proxyv2:1.1.5"  ]]
+        image: [[ annotation .ObjectMeta `sidecar.istio.io/proxyImage`  "docker.io/istio/proxyv2:1.1.6"  ]]
         ports:
         - containerPort: 15090
           protocol: TCP
@@ -12567,7 +12567,7 @@ subjects:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: istio-grafana-post-install-1.1.5
+  name: istio-grafana-post-install-1.1.6
   namespace: istio-system
   annotations:
     "helm.sh/hook": post-install
@@ -12590,7 +12590,7 @@ spec:
       serviceAccountName: istio-grafana-post-install-account
       containers:
         - name: kubectl
-          image: "docker.io/istio/kubectl:1.1.5"
+          image: "docker.io/istio/kubectl:1.1.6"
           command: [ "/bin/bash", "/tmp/grafana/run.sh", "/tmp/grafana/custom-resources.yaml" ]
           volumeMounts:
             - mountPath: "/tmp/grafana"
@@ -12730,7 +12730,7 @@ subjects:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: istio-cleanup-secrets-1.1.5
+  name: istio-cleanup-secrets-1.1.6
   namespace: istio-system
   annotations:
     "helm.sh/hook": post-delete
@@ -12754,7 +12754,7 @@ spec:
       serviceAccountName: istio-cleanup-secrets-service-account
       containers:
         - name: kubectl
-          image: "docker.io/istio/kubectl:1.1.5"
+          image: "docker.io/istio/kubectl:1.1.6"
           imagePullPolicy: IfNotPresent
           command:
           - /bin/bash
@@ -12858,7 +12858,7 @@ subjects:
 apiVersion: batch/v1
 kind: Job	
 metadata:	
-  name: istio-security-post-install-1.1.5	
+  name: istio-security-post-install-1.1.6	
   namespace: istio-system	
   annotations:	
     "helm.sh/hook": post-install	
@@ -12881,7 +12881,7 @@ spec:
       serviceAccountName: istio-security-post-install-account	
       containers:	
         - name: kubectl	
-          image: "docker.io/istio/kubectl:1.1.5"	
+          image: "docker.io/istio/kubectl:1.1.6"	
           imagePullPolicy: IfNotPresent	
           command: [ "/bin/bash", "/tmp/security/run.sh", "/tmp/security/custom-resources.yaml" ]	
           volumeMounts:	
@@ -13584,7 +13584,7 @@ spec:
       serviceAccountName: istio-galley-service-account
       containers:
         - name: galley
-          image: "docker.io/istio/galley:1.1.5"
+          image: "docker.io/istio/galley:1.1.6"
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 443
@@ -13598,6 +13598,7 @@ spec:
           - --livenessProbePath=/healthliveness
           - --readinessProbePath=/healthready
           - --readinessProbeInterval=1s
+          - --deployment-namespace=istio-system
           - --insecure=false
           - --validation-webhook-config-file
           - /etc/config/validatingwebhookconfiguration.yaml
@@ -13708,7 +13709,7 @@ spec:
       serviceAccountName: istio-ingressgateway-service-account
       containers:
         - name: istio-proxy
-          image: "docker.io/istio/proxyv2:1.1.5"
+          image: "docker.io/istio/proxyv2:1.1.6"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 15020
@@ -14087,7 +14088,7 @@ spec:
                 - s390x      
       containers:
       - name: mixer
-        image: "docker.io/istio/mixer:1.1.5"
+        image: "docker.io/istio/mixer:1.1.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 15014
@@ -14123,7 +14124,7 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 5
       - name: istio-proxy
-        image: "docker.io/istio/proxyv2:1.1.5"
+        image: "docker.io/istio/proxyv2:1.1.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9091
@@ -14255,7 +14256,7 @@ spec:
                 - s390x      
       containers:
       - name: mixer
-        image: "docker.io/istio/mixer:1.1.5"
+        image: "docker.io/istio/mixer:1.1.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 15014
@@ -14305,7 +14306,7 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 5
       - name: istio-proxy
-        image: "docker.io/istio/proxyv2:1.1.5"
+        image: "docker.io/istio/proxyv2:1.1.6"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9091
@@ -14394,7 +14395,7 @@ spec:
       serviceAccountName: istio-pilot-service-account
       containers:
         - name: discovery
-          image: "docker.io/istio/pilot:1.1.5"
+          image: "docker.io/istio/pilot:1.1.6"
           imagePullPolicy: IfNotPresent
           args:
           - "discovery"
@@ -14445,7 +14446,7 @@ spec:
             mountPath: /etc/certs
             readOnly: true
         - name: istio-proxy
-          image: "docker.io/istio/proxyv2:1.1.5"
+          image: "docker.io/istio/proxyv2:1.1.6"
           imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 15003
@@ -14566,7 +14567,7 @@ spec:
       serviceAccountName: istio-citadel-service-account
       containers:
         - name: citadel
-          image: "docker.io/istio/citadel:1.1.5"
+          image: "docker.io/istio/citadel:1.1.6"
           imagePullPolicy: IfNotPresent
           args:
             - --append-dns-names=true
@@ -14653,7 +14654,7 @@ spec:
       serviceAccountName: istio-sidecar-injector-service-account
       containers:
         - name: sidecar-injector-webhook
-          image: "docker.io/istio/sidecar_injector:1.1.5"
+          image: "docker.io/istio/sidecar_injector:1.1.6"
           imagePullPolicy: IfNotPresent
           args:
             - --caCertFile=/etc/istio/certs/root-cert.pem
