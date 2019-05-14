@@ -85,7 +85,7 @@ spec:
 ---
 apiVersion: v1
 data:
-  admin-password: dzY5cms4ZjdKaXJZc0puejJYcEI2eG1STjVGTEJIZGlOMEF2UTdjcQ==
+  admin-password: OVp0OTR4NWdORXFZZmZNbkxKWWRsWU5UYnpnZXZUVTkySEVaSWl0MA==
   admin-user: YWRtaW4=
   ldap-toml: ""
 kind: Secret
@@ -98,6 +98,29 @@ metadata:
   name: grafana
   namespace: grafana
 type: Opaque
+
+---
+apiVersion: v1
+data:
+  provider.yaml: |-
+    apiVersion: 1
+    providers:
+    - name: 'default'
+      orgId: 1
+      folder: ''
+      type: file
+      disableDeletion: false
+      options:
+        path: /tmp/dashboards
+kind: ConfigMap
+metadata:
+  labels:
+    app: grafana
+    chart: grafana-3.3.7
+    heritage: Tiller
+    release: grafana
+  name: grafana-config-dashboards
+  namespace: grafana
 
 ---
 apiVersion: v1
@@ -247,7 +270,15 @@ metadata:
     release: grafana
   name: grafana-clusterrole
   namespace: grafana
-rules: []
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - watch
+  - list
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -446,13 +477,25 @@ spec:
       annotations:
         checksum/config: f63e9d89be14b75230ed16e80b04a271a5fa20fd12e8b86be79b5bd8a9219f54
         checksum/dashboards-json-config: 2e3f539a2b68c2bc9728b5d5f068e833daef4f0a3811554ffb2d74f6cd6a115f
-        checksum/sc-dashboard-provider-config: 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b
-        checksum/secret: 648646f4488cc28182829874ed6978ef34ea0f76b45b76f46b2a6cc326f040bc
+        checksum/sc-dashboard-provider-config: 039cfd2c32349d23ce3201a2871727ef2d30399227a266607f3f370adf719b58
+        checksum/secret: 1a316bed7131fcb9af895aabd56345d183da31198d9459a6b265dac14d51082b
       labels:
         app: grafana
         release: grafana
     spec:
       containers:
+      - env:
+        - name: LABEL
+          value: grafana_dashboard
+        - name: FOLDER
+          value: /tmp/dashboards
+        image: kiwigrid/k8s-sidecar:0.0.16
+        imagePullPolicy: IfNotPresent
+        name: grafana-sc-dashboard
+        resources: {}
+        volumeMounts:
+        - mountPath: /tmp/dashboards
+          name: sc-dashboard-volume
       - env:
         - name: GF_SECURITY_ADMIN_USER
           valueFrom:
@@ -501,6 +544,11 @@ spec:
         - mountPath: /etc/grafana/provisioning/dashboards/dashboardproviders.yaml
           name: config
           subPath: dashboardproviders.yaml
+        - mountPath: /tmp/dashboards
+          name: sc-dashboard-volume
+        - mountPath: /etc/grafana/provisioning/dashboards/sc-dashboardproviders.yaml
+          name: sc-dashboard-provider
+          subPath: provider.yaml
       initContainers:
       - command:
         - chown
@@ -548,4 +596,9 @@ spec:
       - name: storage
         persistentVolumeClaim:
           claimName: grafana
+      - emptyDir: {}
+        name: sc-dashboard-volume
+      - configMap:
+          name: grafana-config-dashboards
+        name: sc-dashboard-provider
 
