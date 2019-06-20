@@ -9,7 +9,7 @@ metadata:
     seccomp.security.alpha.kubernetes.io/defaultProfileName: docker/default
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana
@@ -56,7 +56,7 @@ kind: PodSecurityPolicy
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana-test
@@ -85,14 +85,14 @@ spec:
 ---
 apiVersion: v1
 data:
-  admin-password: U0UyNEFBN0czdHhHY2NNaGFDWXFKM2ZTbE5DS3JBRjAzS25kTWhmZQ==
+  admin-password: c3YxT3kzV05FZFhVOXRwVVpzUnNTVkgzNXdOUUVMVEtmOHNNa3FPWQ==
   admin-user: YWRtaW4=
   ldap-toml: ""
 kind: Secret
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana
@@ -116,7 +116,7 @@ kind: ConfigMap
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana-config-dashboards
@@ -176,7 +176,7 @@ kind: ConfigMap
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana
@@ -189,7 +189,7 @@ kind: ConfigMap
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     dashboard-provider: default
     heritage: Tiller
     release: grafana
@@ -210,7 +210,7 @@ kind: ConfigMap
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana-test
@@ -222,7 +222,7 @@ kind: PersistentVolumeClaim
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana
@@ -241,7 +241,7 @@ kind: ServiceAccount
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana
@@ -253,7 +253,7 @@ kind: ServiceAccount
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana-test
@@ -265,7 +265,7 @@ kind: ClusterRole
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana-clusterrole
@@ -286,7 +286,7 @@ kind: ClusterRoleBinding
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana-clusterrolebinding
@@ -306,7 +306,7 @@ kind: Role
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana
@@ -327,7 +327,7 @@ kind: Role
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana-test
@@ -348,7 +348,7 @@ kind: RoleBinding
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana
@@ -368,7 +368,7 @@ kind: RoleBinding
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana-test
@@ -388,7 +388,7 @@ kind: Service
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana
@@ -412,7 +412,7 @@ metadata:
     helm.sh/hook: test-success
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana-test
@@ -459,7 +459,7 @@ kind: Deployment
 metadata:
   labels:
     app: grafana
-    chart: grafana-3.3.10
+    chart: grafana-3.5.4
     heritage: Tiller
     release: grafana
   name: grafana
@@ -471,14 +471,15 @@ spec:
       app: grafana
       release: grafana
   strategy:
+    rollingUpdate: null
     type: RollingUpdate
   template:
     metadata:
       annotations:
-        checksum/config: d193c197a676682516036c29a5c9c01c6a35f59c2a3730c712105908efb6d841
-        checksum/dashboards-json-config: e64f8ab57c728dce2a2291a12f3a2540c082cb1fe3293db5dcf861f161566a29
-        checksum/sc-dashboard-provider-config: 85fd63e023f25d8f7012261da279f69b630c6fdfb4fd29b24a1f4e4b79a5f7f3
-        checksum/secret: 7cc3e8e95790bec39f4a5a85b7f31470c763fceaba9400fbbdaeaa576723a88d
+        checksum/config: 98ca029f2e8e9833d27ff141931d100f5d63505b63f84ba9d6413ff27ce2b34c
+        checksum/dashboards-json-config: 34d30a85d4804eb3eb5069d2db9a5289f6c945f6f6d2ef5f9793a78a8539b2b3
+        checksum/sc-dashboard-provider-config: e043d9b160759f1c15025f93f27f0918e9115ac8d1ece03da9fefab52689e623
+        checksum/secret: 374083ba1c54d05ed0fc5f561bb1610c20515a87baa1780251de78f379904a7b
       labels:
         app: grafana
         release: grafana
@@ -507,7 +508,7 @@ spec:
             secretKeyRef:
               key: admin-password
               name: grafana
-        image: grafana/grafana:6.2.0
+        image: grafana/grafana:6.2.4
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 10
